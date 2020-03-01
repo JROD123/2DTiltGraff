@@ -1,0 +1,125 @@
+.container {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.bg {
+  background: none;
+  width: 700px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  margin: 40px;
+  position: relative;
+}
+
+h1 {
+  transform: translateZ(122px);
+  position: absolute;
+  transform-origin: center center;
+  color: darkorange;
+}
+
+.container:hover h1 {
+  color: deeppink;
+}
+
+.float1 {
+  transform: translateZ(10px);
+  position: absolute;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+  }
+}
+
+.float2 {
+  transform: translateZ(10px);
+  position: absolute;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-22px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+  }
+}
+
+.bling {
+  transform: translateZ(92px);
+  transform-origin: center center;
+  transition: all 500ms linear;
+  perspective: 1000px;
+  animation: slow 1.5s linear 1.5s, fast 1s linear 1s, slow2 1s linear 1s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+@-webkit-keyframes slow {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes fast {
+  from {
+    -webkit-transform: rotate(91deg);
+  }
+  to {
+    -webkit-transform: rotate(270deg);
+  }
+}
+
+@-webkit-keyframes slow2 {
+  from {
+    -webkit-transform: rotate(271deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.fill {
+  transform: translateZ(15px);
+  position: absolute;
+  fill: #dbe120;
+}
+
+.black {
+  transform: translateZ(54px);
+  position: absolute;
+  z-index: 3;
+}
+
+.bubbles {
+  transform: translateZ(24px);
+  position: absolute;
+}
