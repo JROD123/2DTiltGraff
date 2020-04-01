@@ -24,10 +24,10 @@
 }
 
 h1 {
-  transform: translateZ(122px);
   position: absolute;
   transform-origin: center center;
   color: darkorange;
+  transform: translateZ(99px);
 }
 
 .container:hover h1 {
@@ -35,75 +35,93 @@ h1 {
 }
 
 .float1 {
-  transform: translateZ(10px);
   position: absolute;
-  animation: float 4s ease-in-out infinite;
+  transform-origin: center center;
+  transition: all 500ms linear;
+  animation: float 4s ease-in-out infinite 4s;
+  transform: translateZ(15px);
+  animation-iteration-count: infinite;
 }
 
 @keyframes float {
   0% {
-    -webkit-transform: translatey(0px);
+    transform: translateY(0px) translateZ(15px);
   }
   50% {
-    -webkit-transform: translatey(20px);
+    transform: translateY(30px) translateZ(15px);
   }
   100% {
-    -webkit-transform: translatey(0px);
+    transform: translateY(0px) translateZ(15px);
   }
 }
 
 .float2 {
-  transform: translateZ(10px);
   position: absolute;
-  animation: float 4.5s ease-in-out infinite;
+  transform-origin: center center;
+  transition: all 500ms linear;
+  animation: float2 5s ease-in-out infinite 5s;
+  transform: translateZ(15px);
+  animation-iteration-count: infinite;
 }
 
-@keyframes float {
+@keyframes float2 {
   0% {
-    -webkit-transform: translatey(0px);
+    transform: translateY(0px) translateZ(15px);
   }
   50% {
-    -webkit-transform: translatey(-22px);
+    transform: translateY(-40px) translateZ(15px);
   }
   100% {
-    -webkit-transform: translatey(0px);
+    transform: translateY(0px) translateZ(15px);
   }
 }
 
 .bling {
-  transform: translateZ(92px);
   transform-origin: center center;
   transition: all 500ms linear;
-  perspective: 1000px;
-  animation: slow 1.5s linear 1.5s, fast 1s linear 1s, slow2 1s linear 1s;
+  animation: slow 1.25s linear 0.5s;
+  /* animation: slow 1.5s linear 1.5s, fast 1s linear 1s, slow2 1s linear 1s; */
   animation-iteration-count: infinite;
   position: absolute;
+  transform: translateZ(77px);
+  transform-origin: 29% 26%;
 }
 
-@-webkit-keyframes slow {
+@keyframes slow {
   from {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg) translateZ(77px);
   }
   to {
-    -webkit-transform: rotate(90deg);
-  }
-}
-
-@-webkit-keyframes fast {
-  from {
-    -webkit-transform: rotate(91deg);
-  }
-  to {
-    -webkit-transform: rotate(270deg);
+    transform: rotate(360deg) translateZ(77px);
   }
 }
 
-@-webkit-keyframes slow2 {
+@keyframes fast {
   from {
-    -webkit-transform: rotate(271deg);
+    transform: rotate(0deg) translateZ(77px);
   }
   to {
-    -webkit-transform: rotate(359deg);
+    transform: rotate(10deg) translateZ(77px);
+  }
+}
+
+.bling2 {
+  transform-origin: center center;
+  transition: all 500ms linear;
+  animation: slow 1.25s linear 0.5s;
+  /* animation: slow 1.5s linear 1.5s, fast 1s linear 1s, slow2 1s linear 1s; */
+  animation-iteration-count: infinite;
+  position: absolute;
+  transform: translateZ(77px);
+  transform-origin: 72% 72%;
+}
+
+@keyframes slow {
+  from {
+    transform: rotate(0deg) translateZ(77px);
+  }
+  to {
+    transform: rotate(360deg) translateZ(77px);
   }
 }
 
@@ -114,9 +132,9 @@ h1 {
 }
 
 .black {
-  transform: translateZ(54px);
+  transform: translateZ(38px);
   position: absolute;
-  z-index: 3;
+  /* z-index: 3; */
 }
 
 .bubbles {
