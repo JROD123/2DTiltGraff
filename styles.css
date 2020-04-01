@@ -39,19 +39,19 @@ h1 {
   transform-origin: center center;
   transition: all 500ms linear;
   animation: float 4s ease-in-out infinite 4s;
-  transform: translateZ(15px);
+  transform: translateZ(5px);
   animation-iteration-count: infinite;
 }
 
 @keyframes float {
   0% {
-    transform: translateY(0px) translateZ(15px);
+    transform: translateY(0px) translateZ(5px);
   }
   50% {
-    transform: translateY(30px) translateZ(15px);
+    transform: translateY(30px) translateZ(5px);
   }
   100% {
-    transform: translateY(0px) translateZ(15px);
+    transform: translateY(0px) translateZ(5px);
   }
 }
 
@@ -60,19 +60,19 @@ h1 {
   transform-origin: center center;
   transition: all 500ms linear;
   animation: float2 5s ease-in-out infinite 5s;
-  transform: translateZ(15px);
+  transform: translateZ(5px);
   animation-iteration-count: infinite;
 }
 
 @keyframes float2 {
   0% {
-    transform: translateY(0px) translateZ(15px);
+    transform: translateY(0px) translateZ(5px);
   }
   50% {
-    transform: translateY(-40px) translateZ(15px);
+    transform: translateY(-40px) translateZ(5px);
   }
   100% {
-    transform: translateY(0px) translateZ(15px);
+    transform: translateY(0px) translateZ(5px);
   }
 }
 
